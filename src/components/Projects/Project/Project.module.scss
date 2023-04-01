@@ -1,0 +1,43 @@
+@import '../../../SASS/variabls.scss';
+@import '../../../SASS/mixins.scss';
+
+.projectStyle {
+    width: 250px;
+    background-color: $secondBodyBackGroundColor;
+    text-align: center;
+    border: 4px solid $borderColor;
+    border-radius: 30px;
+}
+
+.projectDivImg {
+    height: 350px;
+    width: 100%;
+    background-position: center;
+    background-size: 600px 350px; 
+    @include flexy (center, center);
+    border-radius: 25px 25px 0 0;
+}
+
+.buttonProjectStyle {
+    height: 50px;
+    width: 150px;
+    background-color: $buttoninitColor;
+    @include textItalic (20px, 'Poppins', $buttonTextColor );
+    border: 3px solid $borderColor;
+    border-radius: 20px;
+}
+
+.aboutProject {
+    margin: 0px 15px 15px 15px;
+    @include text (16px, 'Poppins', $regularTextColor );
+}
+
+.aboutProjectName {
+    @include textItalic (25px, 'Poppins', $bigTextOrHeaderTextColor );
+    margin: 5px;
+}
+
+.projectDiscription {
+    @include flexy (center, center);
+    flex-direction: column;
+}

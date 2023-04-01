@@ -1,0 +1,19 @@
+@import '../../../../SASS/mixins.scss';
+
+.navBlock {
+    @include flexy (flex-end, center);
+    width: 70%;
+}
+
+.Burger {
+    width: 50px;
+    height: 50px;
+    transition: all .5s ease;
+    rotate: 180deg;
+}
+
+.BurgerW {
+    width: 50px;
+    height: 50px;
+    transition: all .5s ease;
+}

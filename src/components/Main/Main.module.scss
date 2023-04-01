@@ -1,0 +1,64 @@
+@import '../../SASS/variabls.scss';
+@import '../../SASS/mixins.scss';
+
+.mainStyle {
+    background: linear-gradient(to left, $firstBodyBackGroundColor 30%, $gradientBodyBackGroundColor 100%);
+    @include flexy (center, flex-end);
+    min-height: 100vh;
+
+    @media screen and (max-width:900px) {
+        min-height: 80vh;
+    }
+
+    .mainContainer {
+        @include flexy (space-between, center);
+        width: 70%;
+
+        .mainImg {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+        }
+
+        .describe {
+            margin-right: 100px;
+
+            @media screen and (max-width:900px) {
+                position: absolute;
+                top: 350px;
+            }
+
+            .surenameText {
+                @include text (160px, 'Segoe UI', transparent);
+                -webkit-text-stroke: 2px $bigTextOrHeaderTextColor;
+                margin: 0px;
+                line-height: 160px;
+
+                @media screen and (max-width:900px) {
+                    font-size: 15vw;
+                    -webkit-text-stroke: 4px $bigTextOrHeaderTextColor;
+                }
+            }
+
+            .nameText {
+                @include text (80px, 'Poppins', $bigTextOrHeaderTextColor);
+                margin: 0px;
+                line-height: 80px;
+
+                @media screen and (max-width:900px) {
+                    font-size: 10vw;
+                }
+            }
+
+            .spanText {
+                @include textItalic (40px, 'Poppins', $regularTextColor);
+                white-space: nowrap;
+
+                @media screen and (max-width:900px) {
+                    font-size: 5vw;
+                    color: $secondTextColor;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import './../../SASS/variabls.scss';
+@import './../../SASS/mixins.scss';
+
+.Nothing {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+    .MenuOut {
+        @include flexy (center, '');
+        background-color: $headerBackGroundColor;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        transition: all .5s ease;
+    }
+
+    .MenuIn {
+        opacity: 0;
+        @include flexy (center, '');
+        transition: all .5s ease;
+    }
+
+    .headerFixedWOColor {
+        transition: all .5s ease;
+
+        .header {
+            @include flexy (center, '');
+        }
+
+    }
+
+    .headerFixed {
+        background-color: $headerBackGroundColor;
+        transition: all .5s ease;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+        .header {
+            @include flexy (center, '');
+        }
+
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../../SASS/mixins.scss';
+
+.headerLogo {
+    @include flexy (center, flex-start);
+    width: 75px;
+    height: 75px;
+    margin-top: 9px;
+    transition: all .4s ease;
+}
+
+.navBlock {
+    @include flexy (space-between, center);
+    margin: 15px 20px 10px 5px;
+    width: 70%;
+}
+
+@media screen and (max-width: 650px) {
+    .headerLogo {
+        width: 50px;
+        height: 50px;
+        margin-top: 4px;
+        transition: all .4s ease;
+    }
+
+    .navBlock {
+        margin: 25px 20px 10px 5px;
+    }
+}

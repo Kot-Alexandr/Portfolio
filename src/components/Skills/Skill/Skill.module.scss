@@ -1,0 +1,37 @@
+@import '../../../SASS/mixins.scss';
+@import '../../../SASS/variabls.scss';
+
+.skillStyle {
+    width: 250px;
+    border: 3px solid $borderColor;
+    border-radius: 30px;
+    @include flexy ('', center);
+    flex-direction: column;
+    margin: 10px 0px 10px 0px;
+}
+
+.skillImg {
+    height: 50px;
+    width: 50px;
+}
+
+.imgContainer {
+    margin-top: 10px;
+    height: 75px;
+    width: 75px;
+    border: 3px solid $borderColor;
+    border-radius: 45px;
+    background-color: $firstBodyBackGroundColor;
+    @include flexy (center, center)
+}
+
+.spanStyle {
+    margin: 0px 15px 15px 15px;
+    @include text (16px,'Poppins',$regularTextColor );
+
+}
+
+.h3Style {
+    @include textItalic (25px,'Poppins',$bigTextOrHeaderTextColor );
+    margin: 5px;
+}
