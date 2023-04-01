@@ -6,6 +6,7 @@ import s from './Skills.module.scss'
 const Skills = () => {
     return (
         <div className={s.skillsBlockStyle}>
+            <div id='Skills' className={s.up}></div>
             <h2 className={s.skillsName}>SKILLS</h2>
             <div className={s.skillsSkillsStyle}>
                 <Skill props={reactSkill} />

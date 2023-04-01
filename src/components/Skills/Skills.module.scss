@@ -23,3 +23,8 @@
     -webkit-text-stroke: 2px $bigTextOrHeaderTextColor;
     margin: 0;
 }
+
+.up {
+    position: relative;
+    top: -100px;
+}

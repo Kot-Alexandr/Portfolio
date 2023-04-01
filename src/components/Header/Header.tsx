@@ -12,6 +12,7 @@ const Header = () => {
 
     useEffect(() => {
         window.innerWidth < 1200 ? setIsWidthEnough(true) : setIsWidthEnough(false)
+        window.pageYOffset > 150 ? setIsScrollDown(true) : setIsScrollDown(false)
         return () => {
             window.removeEventListener('scroll', AELS)
             window.removeEventListener('resize', AELR)
