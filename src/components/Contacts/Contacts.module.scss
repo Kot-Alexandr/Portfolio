@@ -11,7 +11,7 @@
     @include flexy (center, center);
     flex-direction: column;
     flex-wrap: wrap;
-    width: 80%;
+    width: 70%;
     margin-bottom: 10px;
 }
 
@@ -22,7 +22,7 @@
     @include textItalic (20px, 'Poppins', $buttonTextColor );
     border: 3px solid $borderColor;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     transition: all .5s ease;
 
     &:hover {
@@ -35,19 +35,20 @@
 .formContactsBlock {
     display: flex;
     flex-direction: column;
-    width: 52%;
+    width: 65%;
     margin: 10px 0px 30px 0px;
 }
 
-.inputMiddleStyle {
-    margin: 30px 0px 30px 0px;
+.inputStyle {
+    margin-bottom: 10px;
     border: 3px solid $borderColor;
     height: 30px;
     border-radius: 10px;
     @include textItalic (20px, 'Poppins', $regularTextColor);
     filter: contrast(85%);
     transition: all 0.3s ease;
-    &:focus{
+
+    &:focus {
         outline: none;
         filter: contrast(120%);
         transition: all 0.5s ease;
@@ -56,22 +57,25 @@
     }
 }
 
-
-.inputTopStyle {
-    border: 3px solid $borderColor;
+.inputStyleError {
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 20px 4px $misstakeColor;
+    border: 3px solid $misstakeColor;
     height: 30px;
     border-radius: 10px;
     @include textItalic (20px, 'Poppins', $regularTextColor);
-    filter: contrast(85%);
     transition: all 0.3s ease;
-    &:focus{
+
+    &:focus {
         outline: none;
-        filter: contrast(120%);
+        border: 3px solid $borderColor;
         transition: all 0.5s ease;
         color: $bigTextOrHeaderTextColor;
         box-shadow: 0px 0px 20px 4px $bigTextOrHeaderTextColor;
     }
 }
+
+
 
 .textAreaStyle {
     border: 3px solid $borderColor;
@@ -80,12 +84,30 @@
     @include textItalic (20px, 'Poppins', $regularTextColor);
     filter: contrast(85%);
     transition: all 0.3s ease;
-    &:focus{
+
+    &:focus {
         outline: none;
         filter: contrast(120%);
         transition: all 0.5s ease;
         color: $bigTextOrHeaderTextColor;
         box-shadow: 0px 0px 20px 4px $bigTextOrHeaderTextColor;
+    }
+}
+
+.textAreaErrorStyle {
+    border: 3px solid $misstakeColor;
+    box-shadow: 0px 0px 20px 4px $misstakeColor;
+    height: 100px;
+    border-radius: 10px;
+    @include textItalic (20px, 'Poppins', $regularTextColor);
+    transition: all 0.3s ease;
+
+    &:focus {
+        outline: none;
+        border: 3px solid $borderColor;
+        transition: all 0.5s ease;
+        color: $bigTextOrHeaderTextColor;
+        box-shadow: 0px 0px 20px 4px $borderColor;
     }
 }
 
@@ -103,4 +125,8 @@
 .up {
     position: relative;
     top: -410px;
+}
+
+.errorSpanStyle {
+    @include text (12px, 'Poppins', $misstakeColor);
 }
