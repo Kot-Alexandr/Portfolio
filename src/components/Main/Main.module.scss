@@ -6,9 +6,10 @@
     @include flexy (center, flex-end);
     min-height: 100vh;
 
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:1000px) {
         min-height: 80vh;
     }
+
     .up {
         position: absolute;
         top: 0;
@@ -17,14 +18,20 @@
     .mainContainer {
         @include flexy (space-between, center);
         width: 70%;
+     
+        @media screen and (max-width:550px) {
+          margin-top: 100px;
+        }
+        
 
         .mainImg {
             max-width: 350px;
             width: 100%;
             height: auto;
             transition: all 0.5s;
+
             &:hover {
-                max-width: 375px; 
+                max-width: 375px;
                 transition: all 0.5s;
             }
         }
@@ -32,9 +39,15 @@
         .describe {
             margin-right: 100px;
 
-            @media screen and (max-width:900px) {
+            @media screen and (max-width:1000px) {
                 position: absolute;
-                top: 350px;
+                top: 50%;
+            }
+
+                    
+            @media screen and (max-width:550px) {
+                position: absolute;
+                top: 60%;
             }
 
             .surenameText {
@@ -45,8 +58,10 @@
 
                 @media screen and (max-width:900px) {
                     font-size: 15vw;
+                    line-height: 15vw;
                     -webkit-text-stroke: 4px $bigTextOrHeaderTextColor;
                 }
+            
             }
 
             .nameText {
@@ -54,8 +69,9 @@
                 margin: 0px;
                 line-height: 80px;
 
-                @media screen and (max-width:900px) {
+                @media screen and (max-width:1000px) {
                     font-size: 10vw;
+                    line-height: 10vw;
                 }
             }
 
@@ -63,9 +79,10 @@
                 @include textItalic (40px, 'Poppins', $regularTextColor);
                 white-space: nowrap;
 
-                @media screen and (max-width:900px) {
+                @media screen and (max-width:1000px) {
                     font-size: 5vw;
                     color: $secondTextColor;
+                    line-height: 5vw;
                 }
             }
         }

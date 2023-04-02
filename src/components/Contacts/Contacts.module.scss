@@ -37,6 +37,9 @@
     flex-direction: column;
     width: 65%;
     margin: 10px 0px 30px 0px;
+    @media screen and (max-width:550px) {
+        width: 80%;
+    }
 }
 
 .inputStyle {
@@ -47,7 +50,9 @@
     @include textItalic (20px, 'Poppins', $regularTextColor);
     filter: contrast(85%);
     transition: all 0.3s ease;
-
+    @media screen and (max-width:550px) {
+        @include textItalic (15px, 'Poppins', $regularTextColor);
+    }
     &:focus {
         outline: none;
         filter: contrast(120%);
@@ -65,7 +70,9 @@
     border-radius: 10px;
     @include textItalic (20px, 'Poppins', $regularTextColor);
     transition: all 0.3s ease;
-
+    @media screen and (max-width:550px) {
+        @include textItalic (15px, 'Poppins', $regularTextColor);
+    }
     &:focus {
         outline: none;
         border: 3px solid $borderColor;
@@ -84,7 +91,9 @@
     @include textItalic (20px, 'Poppins', $regularTextColor);
     filter: contrast(85%);
     transition: all 0.3s ease;
-
+    @media screen and (max-width:550px) {
+        @include textItalic (15px, 'Poppins', $regularTextColor);
+    }
     &:focus {
         outline: none;
         filter: contrast(120%);
@@ -101,7 +110,9 @@
     border-radius: 10px;
     @include textItalic (20px, 'Poppins', $regularTextColor);
     transition: all 0.3s ease;
-
+    @media screen and (max-width:550px) {
+        @include textItalic (15px, 'Poppins', $regularTextColor);
+    }
     &:focus {
         outline: none;
         border: 3px solid $borderColor;
@@ -109,17 +120,29 @@
         color: $bigTextOrHeaderTextColor;
         box-shadow: 0px 0px 20px 4px $borderColor;
     }
+   
 }
 
 
 .mainName {
     width: auto;
     @include flexy (center, center);
-    @include text (140px, "Segoe UI", transparent);
-    line-height: 140px;
+    @include text (100px, "Segoe UI", transparent);
+    line-height: 100px;
     border-bottom: 2px solid $underLineBigTextColor;
     -webkit-text-stroke: 2px $bigTextOrHeaderTextColor;
     margin: 20px 0 50px 0;
+
+    @media screen and (min-width:950px) {
+        @include text (140px, "Segoe UI", transparent);
+        line-height: 140px;
+    }
+
+    @media screen and (max-width:550px) {
+        @include text (50px, "Segoe UI", transparent);
+        line-height: 50px;
+    }
+
 }
 
 .up {

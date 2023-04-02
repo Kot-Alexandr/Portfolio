@@ -11,19 +11,22 @@ const Header = () => {
 
 
     useEffect(() => {
-        window.innerWidth < 1200 ? setIsWidthEnough(true) : setIsWidthEnough(false)
+        window.innerWidth < 1000 ? setIsWidthEnough(true) : setIsWidthEnough(false)
         window.pageYOffset > 150 ? setIsScrollDown(true) : setIsScrollDown(false)
         return () => {
             window.removeEventListener('scroll', AELS)
             window.removeEventListener('resize', AELR)
         }
     }, [])
+    
+    window.addEventListener('scroll', AELS)
+    window.addEventListener('resize', AELR)
 
     function AELS() {
         window.scrollY > 100 ? setIsScrollDown(true) : setIsScrollDown(false)
     }
     function AELR() {
-        if (window.innerWidth < 1200) {
+        if (window.innerWidth < 1000) {
             setIsWidthEnough(true)
             setIsCollapsed(true)
         } else {
@@ -32,8 +35,7 @@ const Header = () => {
         }
     }
 
-    window.addEventListener('scroll', AELS)
-    window.addEventListener('resize', AELR)
+ 
 
 
     return (

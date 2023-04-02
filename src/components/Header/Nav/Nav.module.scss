@@ -28,11 +28,16 @@
     .headerLogo {
         width: 50px;
         height: 50px;
-        margin-top: 4px;
+        margin-top: 8px;
         transition: all .4s ease;
     }
 
     .navBlock {
         margin: 25px 20px 10px 5px;
+    }
+
+    .logoDiv {
+        width: 65px;
+        height: 65px;
     }
 }

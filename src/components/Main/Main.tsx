@@ -1,6 +1,7 @@
 import s from './Main.module.scss'
 import me from './../../accets/img/me.svg'
 
+
 const Main = () => {
     return (
         <div className={s.mainStyle}>

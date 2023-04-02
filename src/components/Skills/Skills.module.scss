@@ -19,10 +19,19 @@
 .skillsName {
     width: auto;
     @include flexy (center, center);
-    @include text (140px, "Segoe UI", transparent);
+    @include text (100px, "Segoe UI", transparent);
     border-bottom: 2px solid $underLineBigTextColor;
     -webkit-text-stroke: 2px $bigTextOrHeaderTextColor;
     margin: 0;
+    @media screen and (min-width:950px) {
+        @include text (140px, "Segoe UI", transparent);
+        line-height: 140px;
+    }
+
+    @media screen and (max-width:550px) {
+        @include text (50px, "Segoe UI", transparent);
+        line-height: 50px;
+    }
 }
 
 .up {

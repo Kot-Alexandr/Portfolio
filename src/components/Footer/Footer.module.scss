@@ -11,7 +11,6 @@
 .footerBlock {
     @include flexy (center, center);
     flex-direction: column;
-    flex-wrap: wrap;
     width: 80%;
 }
 
@@ -20,24 +19,40 @@
     -webkit-text-stroke: 2px $bigTextOrHeaderTextColor;
     margin: 0;
     line-height: 80px;
+
+    @media screen and (max-width:550px) {
+        @include text (35px, "Segoe UI", transparent);
+    }
 }
 
 .spanText {
     @include text (16px, "Segoe UI", $regularTextColor);
     margin-top: 20px;
+
+    @media screen and (max-width:550px) {
+        @include text (12px, "Segoe UI", $regularTextColor);
+    }
 }
 
 .footersIMG {
     display: flex;
     justify-content: space-around;
     height: 50px;
+
+    @media screen and (max-width:550px) {
+        height: 30px;
+    }
 }
 
 .imgFoot {
     margin: 0px 20px 0px 20px;
     width: 50px;
-    &:hover{
+
+    &:hover {
         filter: invert(25%);
     }
-}
 
+    @media screen and (max-width:550px) {
+        width: 30px;
+    }
+}
