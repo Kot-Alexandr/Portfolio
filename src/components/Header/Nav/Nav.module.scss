@@ -1,11 +1,21 @@
 @import '../../../SASS/mixins.scss';
 
 .headerLogo {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    transition: all .4s ease;
+    filter: contrast(100%);
+}
+
+.logoDiv {
     @include flexy (center, flex-start);
     width: 75px;
     height: 75px;
-    margin-top: 9px;
-    transition: all .4s ease;
+    background-color: $LogoBackGroundColor;
+    border-radius: 50%;
+    border: 3px solid $borderColor;
+    box-shadow: 0 0 20px 5px $firstBodyBackGroundColor;
 }
 
 .navBlock {

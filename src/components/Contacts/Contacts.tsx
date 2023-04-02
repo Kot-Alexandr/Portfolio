@@ -3,6 +3,7 @@ import s from './Contacts.module.scss'
 const Contacts = () => {
     return (
         <div className={s.contactsStyle}>
+            <div id='Contacts' className={s.up}></div>
             <div className={s.contactsBlock}>
                 <h3 className={s.mainName}>CONTACTS</h3>
                 <form className={s.formContactsBlock}>

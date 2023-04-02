@@ -25,6 +25,13 @@
     @include textItalic (20px, 'Poppins', $buttonTextColor );
     border: 3px solid $borderColor;
     border-radius: 20px;
+    transition: all .5s ease;
+
+    &:hover {
+        box-shadow: 0 0 20px 8px $borderColor;
+        transition: all .5s ease;
+        @include textItalic (22px, 'Poppins', $buttonTextColor );
+    }
 }
 
 .aboutProject {

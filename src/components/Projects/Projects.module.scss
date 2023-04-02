@@ -21,4 +21,10 @@
     @include text (140px, "Segoe UI", transparent);
     border-bottom: 2px solid $underLineBigTextColor;
     -webkit-text-stroke: 2px $bigTextOrHeaderTextColor;
+    margin: 0 0 50px 0;
+}
+
+.up {
+    position: relative;
+    top: -110px;
 }

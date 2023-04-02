@@ -12,6 +12,7 @@ const Main = () => {
                     <span className={s.spanText}>Frontend Developer</span>
                 </div>
             </div>
+            <div id='Main' className={s.up}></div>
         </div>
     )
 }

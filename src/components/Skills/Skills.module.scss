@@ -6,6 +6,7 @@
     @include flexy (center, center);
     flex-direction: column;
     min-height: 100vh;
+    scroll-behavior: smooth
 }
 
 .skillsSkillsStyle {
@@ -26,5 +27,6 @@
 
 .up {
     position: relative;
-    top: -100px;
+    top: -120px;
+    
 }
