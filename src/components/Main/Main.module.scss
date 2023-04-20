@@ -41,7 +41,12 @@
 
             @media screen and (max-width:1000px) {
                 position: absolute;
-                top: 50%;
+                top: 55%;
+            }
+
+            @media screen and (max-width:1000px) and (height:760px) {
+                position: absolute;
+                top: 40%;
             }
 
                     
