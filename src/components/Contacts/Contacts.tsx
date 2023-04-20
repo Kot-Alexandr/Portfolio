@@ -28,11 +28,7 @@ const Contacts = () => {
             formik.resetForm()
         },
         validate: values => {
-            const errors: ErrorsType = {
-                name: "",
-                email: "",
-                message: ""
-            }
+            const errors: ErrorsType = { }
             if (!values.name) {
                 errors.name = 'Required';
             } else if (values.name.length > 15) {
@@ -51,7 +47,6 @@ const Contacts = () => {
                 errors.message = 'Must be 500 characters or less';
             }
 
-            console.log(errors)
             return errors;
         }
 
