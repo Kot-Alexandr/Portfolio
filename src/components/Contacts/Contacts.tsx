@@ -1,5 +1,6 @@
 import { useFormik } from 'formik';
 import s from './Contacts.module.scss';
+import axios from 'axios';
 
 
 type ErrorsType = {
@@ -19,7 +20,11 @@ const Contacts = () => {
         onSubmit: values => {
             // setLoading(true)
             console.log(values)
-            // axios.post('') //тут свой бэк
+            axios.post('http://localhost:3010/sendMessage', {
+                name: values.name,
+                email: values.email,
+                message: values.message,
+            }) 
             formik.resetForm()
         },
         validate: values => {
