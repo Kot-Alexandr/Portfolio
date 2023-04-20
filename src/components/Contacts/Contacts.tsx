@@ -20,15 +20,19 @@ const Contacts = () => {
         onSubmit: values => {
             // setLoading(true)
             console.log(values)
-            axios.post('http://localhost:3010/sendMessage', {
+            axios.post('https://rrr-kot-alexandr.vercel.app/sendMessage', {
                 name: values.name,
                 email: values.email,
                 message: values.message,
-            }) 
+            })
             formik.resetForm()
         },
         validate: values => {
-            const errors: ErrorsType = {}
+            const errors: ErrorsType = {
+                name: "",
+                email: "",
+                message: ""
+            }
             if (!values.name) {
                 errors.name = 'Required';
             } else if (values.name.length > 15) {
@@ -47,7 +51,7 @@ const Contacts = () => {
                 errors.message = 'Must be 500 characters or less';
             }
 
-
+            console.log(errors)
             return errors;
         }
 
@@ -59,16 +63,21 @@ const Contacts = () => {
             <div className={s.contactsBlock}>
                 <h3 className={s.mainName}>CONTACTS</h3>
                 <form className={s.formContactsBlock} onSubmit={formik.handleSubmit}>
+
                     {formik.touched.name && formik.errors.name && <span className={s.errorSpanStyle}>{formik.errors.name}</span>}
-                    <input className={formik.errors.name ? s.inputStyleError : s.inputStyle} name='name' id='name' type='name' value={formik.values.name} onChange={formik.handleChange}
+
+                    <input className={formik.touched.name && formik.errors.name ? s.inputStyleError : s.inputStyle} name='name' id='name' type='name' value={formik.values.name} onChange={formik.handleChange}
                         placeholder={'Your Name'}></input>
+
                     {formik.touched.email && formik.errors.email && <span className={s.errorSpanStyle}>{formik.errors.email}</span>}
-                    <input className={formik.errors.email ? s.inputStyleError : s.inputStyle} name='email' id='email' type='email' value={formik.values.email} onChange={formik.handleChange}
+                    <input className={formik.touched.name && formik.errors.email ? s.inputStyleError : s.inputStyle} name='email' id='email' type='email' value={formik.values.email} onChange={formik.handleChange}
                         placeholder={'Your Email'}></input>
+
                     {formik.touched.message && formik.errors.message && <span className={s.errorSpanStyle}>{formik.errors.message}</span>}
-                    <textarea className={formik.errors.message ? s.textAreaErrorStyle : s.textAreaStyle} name='message' id='message' value={formik.values.message} onChange={formik.handleChange}
+                    <textarea className={formik.touched.name && formik.errors.message ? s.textAreaErrorStyle : s.textAreaStyle} name='message' id='message' value={formik.values.message} onChange={formik.handleChange}
                         placeholder={'Leave your message'}
                     ></textarea>
+
                     <button className={s.buttonStyle} type='submit'>Submit</button>
                 </form>
             </div>
