@@ -1,6 +1,8 @@
 import { useFormik } from 'formik';
 import s from './Contacts.module.scss';
 import axios from 'axios';
+import { useState } from 'react';
+import Loading from '../Loading/Loading';
 
 
 type ErrorsType = {
@@ -9,7 +11,13 @@ type ErrorsType = {
     message?: string
 }
 
-const Contacts = () => {
+type ContactsPropsType = {
+    setShowModal: (showModal: boolean) => void
+}
+
+const Contacts = ({ setShowModal }: ContactsPropsType) => {
+
+    const [loading, setLoading] = useState(false)
 
     const formik = useFormik({
         initialValues: {
@@ -18,17 +26,25 @@ const Contacts = () => {
             message: '',
         },
         onSubmit: values => {
-            // setLoading(true)
+            setLoading(true)
             console.log(values)
             axios.post('https://rrr-kot-alexandr.vercel.app/sendMessage', {
                 name: values.name,
                 email: values.email,
                 message: values.message,
             })
+                .then((res) => {
+                    setLoading(false)
+                    setShowModal(true)
+                })
+                .catch(() => {
+                    setLoading(false)
+                    alert("Bad connection, try again")
+                })
             formik.resetForm()
         },
         validate: values => {
-            const errors: ErrorsType = { }
+            const errors: ErrorsType = {}
             if (!values.name) {
                 errors.name = 'Required';
             } else if (values.name.length > 15) {
@@ -57,24 +73,29 @@ const Contacts = () => {
             <div id='Contacts' className={s.up}></div>
             <div className={s.contactsBlock}>
                 <h3 className={s.mainName}>CONTACTS</h3>
-                <form className={s.formContactsBlock} onSubmit={formik.handleSubmit}>
 
-                    {formik.touched.name && formik.errors.name && <span className={s.errorSpanStyle}>{formik.errors.name}</span>}
+                {loading
+                    ? <Loading />
+                    : <form className={s.formContactsBlock} onSubmit={formik.handleSubmit}>
 
-                    <input className={formik.touched.name && formik.errors.name ? s.inputStyleError : s.inputStyle} name='name' id='name' type='name' value={formik.values.name} onChange={formik.handleChange}
-                        placeholder={'Your Name'}></input>
+                        {formik.touched.name && formik.errors.name && <span className={s.errorSpanStyle}>{formik.errors.name}</span>}
 
-                    {formik.touched.email && formik.errors.email && <span className={s.errorSpanStyle}>{formik.errors.email}</span>}
-                    <input className={formik.touched.name && formik.errors.email ? s.inputStyleError : s.inputStyle} name='email' id='email' type='email' value={formik.values.email} onChange={formik.handleChange}
-                        placeholder={'Your Email'}></input>
+                        <input className={formik.touched.name && formik.errors.name ? s.inputStyleError : s.inputStyle} name='name' id='name' type='name' value={formik.values.name} onChange={formik.handleChange}
+                            placeholder={'Your Name'}></input>
 
-                    {formik.touched.message && formik.errors.message && <span className={s.errorSpanStyle}>{formik.errors.message}</span>}
-                    <textarea className={formik.touched.name && formik.errors.message ? s.textAreaErrorStyle : s.textAreaStyle} name='message' id='message' value={formik.values.message} onChange={formik.handleChange}
-                        placeholder={'Leave your message'}
-                    ></textarea>
+                        {formik.touched.email && formik.errors.email && <span className={s.errorSpanStyle}>{formik.errors.email}</span>}
+                        <input className={formik.touched.name && formik.errors.email ? s.inputStyleError : s.inputStyle} name='email' id='email' type='email' value={formik.values.email} onChange={formik.handleChange}
+                            placeholder={'Your Email'}></input>
 
-                    <button className={s.buttonStyle} type='submit'>Submit</button>
-                </form>
+                        {formik.touched.message && formik.errors.message && <span className={s.errorSpanStyle}>{formik.errors.message}</span>}
+                        <textarea className={formik.touched.name && formik.errors.message ? s.textAreaErrorStyle : s.textAreaStyle} name='message' id='message' value={formik.values.message} onChange={formik.handleChange}
+                            placeholder={'Leave your message'}
+                        ></textarea>
+
+                        <button className={s.buttonStyle} type='submit'>Submit</button>
+                    </form>
+                }
+
             </div>
         </div>
     )

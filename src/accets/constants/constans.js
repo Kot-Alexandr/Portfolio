@@ -93,11 +93,13 @@ export const jsSkill = {
 }
 export const toDoProject = {
     url: toDoImg,
+    urlWeb:'https://kot-alexandr.github.io/To-Do/',
     title: 'Todolist',
     text: "Educational project written in react and redax using Ts. Logization pages were developed (formic was used), CRUD operations were organized for todolists and tasks"
 }
 export const socialNetworkProject = {
     url: socialNWImg,
+    urlWeb:'',
     title: 'Social network',
     text: "Educational project written in react and redax using Ts. Pages of login, profile and subscribers were developed"
 }
