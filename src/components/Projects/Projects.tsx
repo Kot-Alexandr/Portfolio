@@ -1,4 +1,4 @@
-import { socialNetworkProject, toDoProject } from '../../accets/constants/constans'
+import { socialNetworkProject, toDoProject, landingsProject, notesProject } from '../../accets/constants/constans'
 import Project from './Project/Project'
 import s from './Projects.module.scss'
 
@@ -10,6 +10,8 @@ const Projects = () => {
             <div className={s.projectContainer}>
                 <Project props={toDoProject}/>
                 <Project props={socialNetworkProject}/>
+                <Project props={landingsProject}/>
+                <Project props={notesProject}/>
             </div>
         </div>
     )

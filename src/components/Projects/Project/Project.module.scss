@@ -14,7 +14,7 @@
     height: 350px;
     width: 100%;
     background-position: center;
-    background-size: 600px 350px; 
+    background-size: cover;
     @include flexy (center, center);
     border-radius: 25px 25px 0 0;
 }

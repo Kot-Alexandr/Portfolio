@@ -15,6 +15,8 @@ import softskillsImg from '../img/skillsIMG/softskills.svg'
 import jsImg from '../img/skillsIMG/js.svg'
 import toDoImg from '../img/toDo.svg'
 import socialNWImg from '../img/SN.svg'
+import landings from '../img/landings.png'
+import notes from '../img/notes.png'
 
 export const reactSkill = {
     url: reactImg,
@@ -102,4 +104,16 @@ export const socialNetworkProject = {
     urlWeb:'',
     title: 'Social network',
     text: "Educational project written in react and redax using Ts. Pages of login, profile and subscribers were developed"
+}
+export const landingsProject = {
+    url: landings,
+    urlWeb:'https://kot-alexandr.github.io/landings/',
+    title: 'Landings',
+    text: "Some examples of landings"
+}
+export const notesProject = {
+    url: notes,
+    urlWeb:'https://neon-travesseiro-b73146.netlify.app/',
+    title: 'Notes',
+    text: "Pet project of creating notes and highlight main words with #"
 }
