@@ -94,24 +94,28 @@ export const jsSkill = {
     text: "Variable declarations (var, let, const), block scope, naming. Operators (arithmetic, logical, comparison) and control statements (loops, switch, try/catch). Methods. Object. 'This' context ( basic understanding). Functions in JS: function expressions, IIF, arrow functions. Prototypes (basic understanding of prototype chain). setTimeout/setInterval. Promise, async and await"
 }
 export const toDoProject = {
+    buttonName: "Look",
     url: toDoImg,
     urlWeb:'https://kot-alexandr.github.io/To-Do/',
     title: 'Todolist',
     text: "Educational project written in react and redax using Ts. Logization pages were developed (formic was used), CRUD operations were organized for todolists and tasks"
 }
 export const socialNetworkProject = {
+    buttonName: "Soon",
     url: socialNWImg,
     urlWeb:'',
     title: 'Social network',
     text: "Educational project written in react and redax using Ts. Pages of login, profile and subscribers were developed"
 }
 export const landingsProject = {
+    buttonName: "Look",
     url: landings,
     urlWeb:'https://kot-alexandr.github.io/landings/',
     title: 'Landings',
     text: "Some examples of landings"
 }
 export const notesProject = {
+    buttonName: "Look",
     url: notes,
     urlWeb:'https://neon-travesseiro-b73146.netlify.app/',
     title: 'Notes',
