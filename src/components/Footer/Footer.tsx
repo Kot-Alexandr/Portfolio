@@ -12,7 +12,7 @@ const Footer = () => {
             <div className={s.footerBlock}>
                 <h3 className={s.h3footer}>Cat and Co.</h3>
                 <div className={s.footersIMG}>
-                    <a href='https://t.me/kitiflat' target="_blank" rel="noreferrer"> <img src={telegram} className={s.imgFoot} /></a>
+                    <a href='https://t.me/Kot_Alexandr' target="_blank" rel="noreferrer"> <img src={telegram} className={s.imgFoot} /></a>
                     <a href='https://www.linkedin.com/in/alexandr-kot-0a5b9a262/' target="_blank" rel="noreferrer"><img src={linked} className={s.imgFoot} /></a>
                     <a href='mailto:alexandr.kot.dev@gmail.com?subject=Job notification letter'><img src={gmail} className={s.imgFoot} /></a>
                     <a href='https://github.com/Kot-Alexandr' target="_blank" rel="noreferrer"> <img src={github} className={s.imgFoot} /></a>
