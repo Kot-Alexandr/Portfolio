@@ -10,8 +10,8 @@ const Projects = () => {
             <div className={s.projectContainer}>
                 <Project props={toDoProject}/>
                 <Project props={socialNetworkProject}/>
-                <Project props={landingsProject}/>
-                <Project props={notesProject}/>
+                {/* <Project props={landingsProject}/>
+                <Project props={notesProject}/> */}
             </div>
         </div>
     )
