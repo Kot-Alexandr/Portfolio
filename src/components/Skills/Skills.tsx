@@ -1,4 +1,4 @@
-import { cssSkill, dockerSkill, figmaSkill, githubSkill, htmlSkill, jsSkill, materialuiSkill, nodejsSkill, reactSkill, reduxSkill, scssSkill, softskillsSkill, testsSkill, typescriptSkill, webpackSkill } from '../../accets/constants/constans'
+import { cssSkill, dockerSkill, figmaSkill, githubSkill, htmlSkill, jsSkill, materialuiSkill, nodejsSkill, reactSkill, reduxSkill, scssSkill, softskillsSkill, tailWind, testsSkill, typescriptSkill, webpackSkill } from '../../accets/constants/constans'
 import Skill from './Skill/Skill'
 import s from './Skills.module.scss'
 
@@ -24,6 +24,7 @@ const Skills = () => {
                 <Skill props={jsSkill} />
                 <Skill props={nodejsSkill} />
                 <Skill props={typescriptSkill} />
+                <Skill props={tailWind} />
             </div>
         </div>
     )

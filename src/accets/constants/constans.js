@@ -3,6 +3,7 @@ import reduxImg from '../img/skillsIMG/redux.svg'
 import cssImg from '../img/skillsIMG/css.svg'
 import htmlImg from '../img/skillsIMG/html.svg'
 import dockerImg from '../img/skillsIMG/docker.svg'
+import tailwind from '../img/skillsIMG/tailwind.svg'
 import figmaImg from '../img/skillsIMG/figma.svg'
 import githubImg from '../img/skillsIMG/github.svg'
 import materialuiImg from '../img/skillsIMG/materialui.svg'
@@ -16,7 +17,7 @@ import jsImg from '../img/skillsIMG/js.svg'
 import toDoImg from '../img/toDo.svg'
 import socialNWImg from '../img/SN.svg'
 import landings from '../img/landings.png'
-import notes from '../img/notes.png'
+import bank from '../img/bank.svg'
 
 export const reactSkill = {
     url: reactImg,
@@ -93,6 +94,11 @@ export const jsSkill = {
     title: 'JS',
     text: "Variable declarations (var, let, const), block scope, naming. Operators (arithmetic, logical, comparison) and control statements (loops, switch, try/catch). Methods. Object. 'This' context ( basic understanding). Functions in JS: function expressions, IIF, arrow functions. Prototypes (basic understanding of prototype chain). setTimeout/setInterval. Promise, async and await"
 }
+export const tailWind = {
+    url: tailwind,
+    title: 'Tailwind',
+    text: "Knowledge of working with it. Using in my projects with SASS. Less lines of code and more readable code in css/scss files"
+}
 export const toDoProject = {
     buttonName: "Look",
     url: toDoImg,
@@ -114,10 +120,11 @@ export const landingsProject = {
     title: 'Landings',
     text: "Some examples of landings"
 }
-export const notesProject = {
+
+export const TestBankProject = {
     buttonName: "Look",
-    url: notes,
-    urlWeb:'https://neon-travesseiro-b73146.netlify.app/',
-    title: 'Notes',
-    text: "Pet project of creating notes and highlight main words with #"
+    url: bank,
+    urlWeb:'https://kot-alexandr.github.io/ListPage',
+    title: 'BankAcount',
+    text: "Test task with using react-router-dom, sort UsersData for Bank with query parametrs. Using Tailwind"
 }
