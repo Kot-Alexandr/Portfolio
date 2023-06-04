@@ -116,7 +116,7 @@ export const socialNetworkProject = {
 export const landingsProject = {
     buttonName: "Look",
     url: landings,
-    urlWeb:'https://kot-alexandr.github.io/landings/',
+    urlWeb:'https://kot-alexandr.github.io/Landings/',
     title: 'Landings',
     text: "Some examples of landings"
 }

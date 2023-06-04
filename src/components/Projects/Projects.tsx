@@ -11,7 +11,7 @@ const Projects = () => {
                 <Project props={toDoProject} />
                 <Project props={socialNetworkProject} />
                 <Project props={TestBankProject} />
-                {/* <Project props={landingsProject}/> */}
+                <Project props={landingsProject}/>
             </div>
         </div>
     )
